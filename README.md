@@ -1,2 +1,2 @@
 # station-data
-SQL + Python pipeline analyzing 35 years of raw weather station data (1989–2024).
+SQL + Python pipeline analyzing 26 years of raw weather station data (1998–2024).
