@@ -23,6 +23,7 @@ Current Status: Paused
 
 ### Structure
 
+```
 data/
   A-2024/
     geo_raw_2024_09.csv    # raw data
@@ -31,3 +32,4 @@ cuadernos/
   3_era_exploration.ipynb  # exploration: cleaning + outliers
 src/
   ...
+```
