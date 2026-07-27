@@ -1,4 +1,4 @@
-# station-data (in progress)
+# station-data 
 
 The goal of this project is to analyze 27 years of original raw climate data using Pandas and SQL. 
 
@@ -6,9 +6,7 @@ The goal of this project is to analyze 27 years of original raw climate data usi
 ![September 2024 climate distributions](images/september_2024_distributions.png)
 
 
-Current Status: (in progress) 
-
-### Progress so far
+### Current Status: (in progress) 
 
 - Cleaning and Parsing of the September 2024 csv
     - Corrupted Names   (Mï¿½xima Temperatura...) and nested double quotes.
