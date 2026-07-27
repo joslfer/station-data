@@ -2,7 +2,11 @@
 
 The goal of this project is to analyze 27 years of original raw climate data using Pandas and SQL. 
 
-Current Status: Paused 
+
+![September 2024 climate distributions](images/september_2024_distributions.png)
+
+
+Current Status: (in progress) 
 
 ### Progress so far
 
