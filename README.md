@@ -4,6 +4,10 @@ The goal of this project is to analyze 27 years of original raw climate data usi
 
 There are various eras in the data, each one with its own problems.
 
+![Data to convert](./images/datafolders.png)
+
+
+Climate variables (third era): 
 
 ![September 2024 climate distributions](images/september_2024_distributions.png)
 
@@ -60,3 +64,5 @@ src/
 LICENSE
 README.md
 ```
+
+
