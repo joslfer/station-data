@@ -22,8 +22,9 @@ There are various eras in the data, each one with its own problems.
     - Found out that `avg_wind_sppeed` and `wind_run` don't follow a normal distribution. 
     - Histogram visualization with z = 3 threshold. 
 
-- Era 2 (Automatic station, 2000-2021)
-    - Pilot cleaning of `F2001-01.xls` (not published).
+- Era 1
+- Era 2: 2000-2011
+    - Cleaning of `F2001-01.xls` (not published).
     - Separated measurement rows from daily summary rows (`Total`).
     - Renamed columns following my project naming convention.
     - Parsed the raw time column (`H`) and handled `24:00` timestamps by shifting them to the next day.
@@ -33,10 +34,10 @@ There are various eras in the data, each one with its own problems.
     - Coded range loader. (successfuly loaded 2001-2011 range)
       - Solved corrupt data in `F2002-01.xls` file. 
       - Solved corrupt data in `F2006-02.xls` file. 
+- Era 3: 2012-2023
+- Era 4: 2024
 
-
-
-### Climate variables (third era): 
+### Climate variables (era 4): 
 
 ![September 2024 climate distributions](images/september_2024_distributions.png)
 
@@ -46,9 +47,10 @@ There are various eras in the data, each one with its own problems.
 
 ## Example histogram (wind run)
 
-![wind_run histogram](./images/wind_run_histogram.png)
 
-
+<p align="center">
+  <img src="./images/wind_run_histogram.png" alt="wind_run histogram" width="500">
+</p>
 
 ## Structure
 
