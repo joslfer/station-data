@@ -4,7 +4,9 @@ The goal of this project is to analyze 27 years of original raw climate data usi
 
 There are various eras in the data, each one with its own problems.
 
-<img src="./images/datafolders.png" alt="Data to convert" width="500">
+<p align="center">
+  <img src="./images/datafolders.png" alt="Data folders" width="500">
+</p>
 
 Climate variables (third era): 
 
