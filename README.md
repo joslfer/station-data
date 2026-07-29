@@ -8,12 +8,8 @@ There are various eras in the data, each one with its own problems.
   <img src="./images/datafolders.png" alt="Data folders" width="500">
 </p>
 
-Climate variables (third era): 
 
-![September 2024 climate distributions](images/september_2024_distributions.png)
-
-
-### Current Status: (in progress) 
+## Current Status: (in progress) 
 
 - Cleaning and Parsing of the September 2024 csv
     - Corrupted Names   (Mï¿½xima Temperatura...) and nested double quotes.
@@ -36,21 +32,28 @@ Climate variables (third era):
 
 
 
+### Climate variables (third era): 
+
+![September 2024 climate distributions](images/september_2024_distributions.png)
+
+### Example graph (september 2001)
+
 ![temperature_example](./images/example_temperature.png)
 
+## Example histogram (wind run)
 
 ![wind_run histogram](./images/wind_run_histogram.png)
 
 
 
-
-### Structure
+## Structure
 
 ```text
 data/
   A-1998/ ... A-2024/
 
 images/
+  datafolders.png
   example_temperature.png
   september_2024_distributions.png
   wind_run_histogram.png
@@ -58,12 +61,11 @@ images/
 notebooks/
   2_era_exploration.ipynb
   3_era_exploration.ipynb
+  4_loader_prototypes.ipynb
 
 src/
-  loaders/
+  loaders.py
 
 LICENSE
 README.md
 ```
-
-
