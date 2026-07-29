@@ -29,6 +29,10 @@ There are various eras in the data, each one with its own problems.
     - Parsed the raw time column (`H`) and handled `24:00` timestamps by shifting them to the next day.
     - Created a unified `date` datetime column and validated the temporal consistency of the time series.
     - Visualized temperature evolution during september to confirm that the data is correct.
+    - Coded monthly loader. 
+    - Coded range loader. (successfuly loaded 2001-2011 range)
+      - Solved corrupt data in `F2002-01.xls` file. 
+      - Solved corrupt data in `F2006-02.xls` file. 
 
 
 
