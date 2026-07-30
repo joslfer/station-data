@@ -49,7 +49,7 @@ There are various eras in the data, each one with its own problems.
 
 ![temperature_example](./images/example_temperature.png)
 
-## Example histogram (wind run)
+### Example histogram (wind run)
 
 
 <p align="center">
