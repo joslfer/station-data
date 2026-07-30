@@ -22,7 +22,7 @@ There are various eras in the data, each one with its own problems.
     - Found out that `avg_wind_sppeed` and `wind_run` don't follow a normal distribution. 
     - Histogram visualization with z = 3 threshold. 
 
-- Era 1
+- Era 1: -
 - Era 2: 2000-2011
     - Cleaning of `F2001-01.xls` (not published).
     - Separated measurement rows from daily summary rows (`Total`).
@@ -35,6 +35,10 @@ There are various eras in the data, each one with its own problems.
       - Solved corrupt data in `F2002-01.xls` file. 
       - Solved corrupt data in `F2006-02.xls` file. 
 - Era 3: 2012-2023
+  - Created `load_month_era3()` loader to load more data like radiantion. 
+  - Adapted range loader with custom `load_month_era3()` loader. 
+  - Created the complete 2000-2001 dataset with `df = load_range(2000,1,2023,2)` 
+  - Made sure that 
 - Era 4: 2024
 
 ### Climate variables (era 4): 

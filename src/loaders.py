@@ -97,7 +97,9 @@ def load_range(start_year, start_month, end_year, end_month, data_dir = "../data
                 #print(f"Error loading {month} {year}")
                 #raise
     combined = pd.concat(monthly_dfs).reset_index(drop = True)
-    return combined
+    combined = combined.drop_duplicates(subset = "date", keep = "first").reset_index(drop=True)
+    df = normalize_df(combined)
+    return df
 
 
 
@@ -187,3 +189,20 @@ def load_month_era3(year,month, data_dir = "../data"):
 
     return df
 
+
+
+def normalize_df(df):
+    new_order = [
+    "date",
+    "temp",
+    "humidity",
+    "vapor_pressure",
+    "vapor_deficit",
+    "dew_point",
+    "rain_mm",
+    "radiation",
+    "radiation_accum",
+    ]
+
+    df = df[new_order]
+    return df
