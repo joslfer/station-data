@@ -38,7 +38,7 @@ There are various eras in the data, each one with its own problems.
   - Created `load_month_era3()` loader to load more data like radiantion. 
   - Adapted range loader with custom `load_month_era3()` loader. 
   - Created the complete 2000-2001 dataset with `df = load_range(2000,1,2023,2)` 
-  - Made sure that 
+  - Made sure that the data makes sense.
 - Era 4: 2024
 
 ### Climate variables (era 4): 
