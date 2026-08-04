@@ -1,4 +1,5 @@
 import pandas as pd
+from tqdm import tqdm 
 
 def load_month(year,month, data_dir = "../data"):
     path = f"{data_dir}/A-{year}/F{year}-{month:02d}.xls" # 02d fills with zeros unitl 2 digits
@@ -35,6 +36,8 @@ def load_month(year,month, data_dir = "../data"):
     }
     df = df.rename(columns=rename_map)
 
+    df["vapor_pressure"] = df["vapor_pressure"]*10
+    
     # parsing H values
     def parse_hour(raw_value):
         chain = str(int(raw_value)).zfill(4)
@@ -85,14 +88,14 @@ def load_range(start_year, start_month, end_year, end_month, data_dir = "../data
     start = f"{start_year}-{start_month:02d}-01"
     end = f"{end_year}-{end_month:02d}-01"
     months = pd.date_range(start,end,freq = "MS")
-    for i in months:
+    for i in tqdm(months, desc = "loading month"):
         year = i.year
         month = i.month 
         if year < 2012: 
-            monthly_dfs.append(load_month(year, month))
+            monthly_dfs.append(load_month(year, month, data_dir))
         else: 
             #try:   
-            monthly_dfs.append(load_month_era3(year, month))
+            monthly_dfs.append(load_month_era3(year, month, data_dir))
             #except Exception as e:
                 #print(f"Error loading {month} {year}")
                 #raise
