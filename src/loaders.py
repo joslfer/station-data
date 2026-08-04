@@ -88,7 +88,7 @@ def load_range(start_year, start_month, end_year, end_month, data_dir = "../data
     start = f"{start_year}-{start_month:02d}-01"
     end = f"{end_year}-{end_month:02d}-01"
     months = pd.date_range(start,end,freq = "MS")
-    for i in tqdm(months, desc = "loading month"):
+    for i in tqdm(months, desc = "loading months"):
         year = i.year
         month = i.month 
         if year < 2012: 
@@ -102,6 +102,7 @@ def load_range(start_year, start_month, end_year, end_month, data_dir = "../data
     combined = pd.concat(monthly_dfs).reset_index(drop = True)
     combined = combined.drop_duplicates(subset = "date", keep = "first").reset_index(drop=True)
     df = normalize_df(combined)
+    df.loc[df["humidity"] == 100, "vapor_pressure"] = pd.NA
     return df
 
 
@@ -158,6 +159,7 @@ def load_month_era3(year,month, data_dir = "../data"):
     mask_2400 = df["H"] == "24:00"
     df.loc[mask_2400, "H"] = "00:00"
 
+    
 
     # creating a timestamp
     df["hour"] = df["H"].str[:2]
@@ -189,6 +191,12 @@ def load_month_era3(year,month, data_dir = "../data"):
 
     # adding a day
     df.loc[mask_2400,"date"] += pd.Timedelta(days=1)
+
+    cutoff = pd.Timestamp("2012-01-24 12:20:00")
+    mask_kpa = df["date"] < cutoff
+
+    df.loc[mask_kpa, "vapor_pressure"] = (pd.to_numeric(df.loc[mask_kpa,"vapor_pressure"], errors = "coerce")*10)
+    df.loc[mask_kpa, "vapor_deficit"] = (pd.to_numeric(df.loc[mask_kpa,"vapor_deficit"], errors = "coerce")*10)
 
     return df
 
