@@ -1,7 +1,7 @@
 # station-data 
 
 
-En este proyecto analizo datos de una estación meteorológica de 2000 a 2023 con Pandas y SQL. Los datos son originales y estaban con todo tipo de formatos. Una vez parseados, limpaiados y orenados en una base de datos, los he analizado respondiendo cuestiones relevantes y dibujando gráficas para entenderlos bien. 
+En este proyecto **preparo y analizo datos de una estación meteorológica de 2000 a 2023 con Pandas y SQL**. Los datos son originales y estaban con todo tipo de formatos. Una vez parseados, limpaiados y orenados en una base de datos, los he analizado respondiendo cuestiones relevantes y dibujando gráficas para entenderlos bien. 
 
 La estación meteorológica resgistró en su día en formato antiguo de excel, xls. A medida que pasaron los años, se fueron añadiendo instrumentos nuevos (radiómetro, higrómetro) y cambió la forma de medir junto con los nombres. Poder llegar al final a una base de datos limpia ha sido la parte más difícil. 
 
