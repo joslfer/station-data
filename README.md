@@ -2,7 +2,7 @@
 
 En este proyecto **preparo y analizo datos** de una estación meteorológica de la USAL de 2000 a 2023 con **Pandas y SQL.** 🌦️ 
 
-## Instalación e introducción
+### Instalación e introducción
 
 > **Nota sobre los datos:** son originales y no están publicados. No están incluidos ni los excels ni la base de datos ni el parquet construido. El repo tiene el pipeline entero de ETL para portfolio. El código en src/ y los notebooks muestran el proceso. Si necesitas ejecutarlo avísame. 
 
@@ -186,7 +186,7 @@ Para el análisis de datos he usado matplotlib y el dataframe de pandas que se c
 
 
 
-## Estructura de archivos
+### Estructura de archivos
 
 ```
 data/                     # no incluido en el repo
